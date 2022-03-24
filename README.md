@@ -27,6 +27,11 @@
 7. Type `rails s` to run live server.
 8. Open your browser on this [127.0.0.1:3000](127.0.0.1:3000)
 
+## Tests
+
+1. insure that you run `bundle install` on your terminal first.
+2. To run tests run this command `rspec`.
+
 ## Author
 
 👨‍💻 **Omar Muhammad**
