@@ -23,9 +23,9 @@
 3. Open terminal and navigate to the project folder.
 4. Install all gems by run this command `bundle install`
 5. Open `database.yml` file inside `./config` folder and put your username and password.
-6. Type `rails s` to run live server.
-7. Open your browser on this [127.0.0.1:3000](127.0.0.1:3000)
-8. Now you will see a button saying `create database` click on it and turn off the rails sever an run it again.
+6. Run `rails db:create` and `rails db:migrate` to create and migrate the database then run `rails db:seed` to seed data if there's any.
+7. Type `rails s` to run live server.
+8. Open your browser on this [127.0.0.1:3000](127.0.0.1:3000)
 
 ## Author
 
