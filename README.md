@@ -16,7 +16,7 @@
 - Install Rails by running this order in your terminal `gem install rails` (good luck with that).
 - Install PostgreSQL from this [link](https://www.postgresql.org/download/).
 
-## Setup
+## Getting started
 
 1. Clone the project using git-bash or Githup Desktop.
 2. Open the project folder with VSCode or any Editor.
