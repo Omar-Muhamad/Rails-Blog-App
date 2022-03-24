@@ -1,6 +1,9 @@
+# Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :users, only: [:index, :show] do
+    resources :posts, only: :show, only: [:index, :show]
+  end
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  root "users#index"
 end
