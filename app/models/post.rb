@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_many :likes
   belongs_to :user, foreign_key: :author_id
 
+  after_save :update_posts_counter
   def update_posts_counter
     user.update(posts_counter: user.posts.count)
   end
