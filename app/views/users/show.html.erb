@@ -16,13 +16,13 @@
   <ul class="userCards flex flex-col gap-8">
     <% @posts.each do |post| %>
       <li class="postCard">
-        <a href="posts/<%= post.id %>" class="flex flex-row gap-[30px]">
+        <a href="<%= user_posts_path(@user) %>" class="flex flex-row gap-[30px]">
           <div class="postDetails bg-[#11537d] rounded-[30px] flex-grow text-white flex flex-col p-[30px]">
             <div>  
               <h2 class="text-3xl font-semibold"><%= post.title %></h2>
               <p class="text-md text-center font-medium"><%= post.text %></p>
             </div> 
-            <p class="self-end">Likes: <%= post.likes_counter %> , comments: Likes: <%= post.comments_counter %></p>
+            <p class="self-end">Likes: <%= post.likes_counter %> , comments: <%= post.comments_counter %></p>
           </div>
         </a>
       </li>
