@@ -13,7 +13,7 @@
   <ul class="userCards flex flex-col gap-8">
     <% @posts.each do |post| %>
       <li class="postCard">
-        <a href="<%user_post_path(@posts)%>" class="flex flex-col gap-8">
+        <a href="<%= user_post_path(@user, post) %>" class="flex flex-col gap-8">
           <div class="postDetails bg-[#11537d] rounded-[30px] flex-grow text-white flex flex-col p-[30px]">
             <div>  
               <h2 class="text-3xl font-semibold"><%= post.title %></h2>

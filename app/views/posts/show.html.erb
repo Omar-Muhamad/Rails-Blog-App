@@ -1,1 +1,16 @@
-<h1>Here is a single post for certain user</h1>
+<div class="p-8 flex flex-col gap-8">
+  <div class="postDetails bg-[#11537d] rounded-[30px] flex-grow text-white flex flex-col p-[30px]">
+    <div>  
+      <h2 class="text-3xl font-semibold"><%= @post.title %></h2>
+      <p class="text-md text-center font-medium"><%= @post.text %></p>
+    </div> 
+    <p class="self-end">Likes: <%= @post.likes_counter %> , comments: <%= @post.comments_counter %></p>
+  </div>
+  <div class="flex flex-col gap-4 comments-container bg-[#11537d] rounded-[30px] flex-grow text-white p-[30px]">
+    <% @comments.each do |comment| %>
+      <div class="comment-details flex-grow text-white flex flex-row">  
+        <p class="text-md text-center font-medium"><%= comment.author.name %>: <%= comment.text %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
