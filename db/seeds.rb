@@ -12,7 +12,7 @@ User.destroy_all
 
 users = []
 6.times do |index|
-  user = User.create(name: "User #{index}", photo:'https://www.pngkit.com/png/full/281-2812821_user-account-management-logo-user-icon-png.png', bio: "This is user #{index}")
+  user = User.create(name: "User #{index}", photo:'https://www.pngkit.com/png/full/281-2812821_user-account-management-logo-user-icon-png.png', bio: "This is user #{index} bio")
   users.push(user)
 end
 
