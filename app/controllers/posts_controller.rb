@@ -8,6 +8,6 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @post = @user.posts.find_by_id(params[:id])
-    @comments = @post.comments
+    @comments = @post.last_five_comments
   end
 end
