@@ -1,5 +1,3 @@
-<h1>Add new post here</h1>
-
 <%= form_with model: [@user, @post], url: create_user_post_path  do |form| %>
   <% if @post.errors.any? %>
     <div>
