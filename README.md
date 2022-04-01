@@ -23,13 +23,13 @@
 3. Open terminal and navigate to the project folder.
 4. Install all gems by run this command `bundle install`
 5. Open `database.yml` file inside `./config` folder and put your username and password.
-6. Run `rails db:create` and `rails db:migrate` to create and migrate the database then run `rails db:seed` to seed data if there's any.
+6. Run `rails db:create` and `rails db:migrate` to create and migrate the database then run `rails db:seed` to seed data or to do all that in one command just type `rails db:reset`.
 7. Type `rails s` to run live server.
-8. Open your browser on this [127.0.0.1:3000](127.0.0.1:3000)
+8. Open your browser on this [link](127.0.0.1:3000).
 
 ## Tests
 
-1. insure that you run `bundle install` on your terminal first.
+1. Insure that you run `bundle install` on your terminal first.
 2. To run tests run this command `rspec`.
 
 ## Author
