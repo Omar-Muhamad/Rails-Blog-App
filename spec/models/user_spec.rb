@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
     subject.name = nil
     expect(subject).to_not(be_valid)
   end
-  
+
   it "shouldn't have any recent posts" do
     expect(subject.last_three_posts.length).to eq(0)
   end
