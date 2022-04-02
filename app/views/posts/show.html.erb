@@ -4,6 +4,11 @@
       <h2 class="text-3xl font-semibold"><%= @post.title %></h2>
       <p class="text-md text-center font-medium"><%= @post.text %></p>
     </div> 
+    <%= form_with model: [@post, @like], url: create_post_like_path  do |form| %>
+      <div class="mb-4 flex flex-col">
+        <%= form.submit "Like 👍" , class: "text-[#11537d] text-xl font-medium bg-white px-4 py-2 rounded-[15px] w-fit cursor-pointer" %>
+      </div>
+    <% end %>
     <p class="self-end">Likes: <%= @post.likes_counter %> , comments: <%= @post.comments_counter %></p>
   </div>
   <div class="flex flex-col gap-4 comments-container bg-[#11537d] rounded-[30px] flex-grow text-white p-[30px]">
@@ -12,5 +17,7 @@
         <p class="text-md text-center font-medium"><%= comment.author.name %>: <%= comment.text %></p>
       </div>
     <% end %>
+    <%= link_to "add comment", new_post_comment_path(@post)%>
   </div>
+  
 </div>
