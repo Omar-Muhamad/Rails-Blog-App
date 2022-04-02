@@ -15,6 +15,6 @@ RSpec.describe User, type: :model do
 
   it 'should have a positive posts counter' do
     subject.posts_counter = -1
-    expect(subject).to_not be_valid
+    expect(subject).to_not(be_valid)
   end
 end
