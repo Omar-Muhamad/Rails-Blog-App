@@ -10,6 +10,7 @@ class PostsController < ApplicationController
     @post = @user.posts.find_by_id(params[:id])
     @comments = @post.comments
     @comment = Comment.new
+    @like = Like.new
   end
 
   def new
@@ -21,7 +22,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.author_id = params[:user_id]
     if @post.save
-      redirect_to root_path notice: "Post created successfully"
+      redirect_to root_path notice: 'Post created successfully'
     else
       render :new
     end
