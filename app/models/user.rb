@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: :author_id
 
   validates :name, presence: true
-  validates :posts_counter, comparison: { greater_than_or_equal_to: 0 }
+  validates :posts_counter, comparison: { greater_than_or_equal_to: 0 }, allow_blank: true
 
   def last_three_posts
     posts.last(3)
