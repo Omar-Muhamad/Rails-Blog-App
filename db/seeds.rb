@@ -28,10 +28,10 @@ end
 
 p "#{Post.count} posts created."
 
-comments = 6.times do |index|
-  3.times do |index2|
-    Comment.create(post: posts[index], author: users[index], text: "Hi There, this is comment number #{index2}." )
-  end
-end
+# comments = 6.times do |index|
+#   3.times do |index2|
+#     Comment.create(post: posts[index], author: users[index], text: "Hi There, this is comment number #{index2}." )
+#   end
+# end
 
 p "#{Comment.count} Comments created."
