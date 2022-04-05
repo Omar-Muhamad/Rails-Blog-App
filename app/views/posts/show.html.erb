@@ -17,7 +17,7 @@
       <div class="comment-details flex-grow text-white flex flex-row">  
         <p class="text-md text-center font-medium"><%= comment.author.name %>: <%= comment.text %></p>
       </div>
-      <%= button_to "Delete Comment", user_post_path method: :delete %>
+      <%= button_to "Delete Comment", user_post_path, method: :delete %>
     <% end %>
     <%= link_to "add comment", new_post_comment_path(@post)%>
   </div>
