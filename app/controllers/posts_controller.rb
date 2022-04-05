@@ -34,7 +34,6 @@ class PostsController < ApplicationController
   def destroy
     post = current_user.posts.find(params[:id])
     post.destroy
-    # current_user.update(posts_counter: current_user.posts_counter - 1) 
     respond_to do |format|
       format.html do 
         flash[:success] = "Post was successfully deleted"
