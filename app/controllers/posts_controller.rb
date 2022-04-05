@@ -31,12 +31,9 @@ class PostsController < ApplicationController
     end
   end
 
-  def delete
-    @user = User.find(params[:user_id])
-    @post = Post.find(params[:user_id])
-    @user.likes.find(@post.id).destroy
-    @user.comments.find(@post.id).destroy
-    Post.find(@post.id).destroy
+  def destroy
+    post = current_user.posts.find(params[:id])
+    post.destroy
     # respond_to do |format|
     #   format.html do 
     #     flash[:success] = "Post was successfully deleted"
