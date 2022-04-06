@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
     @post.comments_counter = 0
     @post.likes_counter = 0
-    
+
     if @post.save
       redirect_to root_path notice: 'Post created successfully'
     else
@@ -35,8 +35,8 @@ class PostsController < ApplicationController
     post = current_user.posts.find(params[:id])
     post.destroy
     respond_to do |format|
-      format.html do 
-        flash[:success] = "Post was successfully deleted"
+      format.html do
+        flash[:success] = 'Post was successfully deleted'
         redirect_to user_posts_path
       end
     end
