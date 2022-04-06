@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'Post index', type: :feature do
   before :each do
-    @user = User.new(name: 'Omar', photo: 'http://photo.com', bio: 'Hello World!', postsCounter: 5,
+    @user = User.new(name: 'Omar', photo: 'http://photo.com', bio: 'Hello World!', posts_counter: 5,
                      email: 'eng.omarmuhammad@gmail.com', password: 'asd123')
     @user.skip_confirmation!
     @user.save!
-    @post = @user.posts.create(title: 'My new post', text: 'This is my new post', commentsCounter: 5, likesCounter: 5)
+    @post = @user.posts.create(title: 'My new post', text: 'This is my new post', comments_counter: 5, likes_counter: 5)
     @comment = @post.comments.create(author: @user, text: 'Hello, First comment')
     visit user_session_path
     fill_in 'Email', with: 'eng.omarmuhammad@gmail.com'
@@ -22,9 +22,8 @@ RSpec.describe 'Post index', type: :feature do
     expect(page).to have_content('My new post')
     expect(page).to have_content('This is my new post')
     expect(page).to have_selector('.post_link', count: 1)
-    expect(page).to have_content('Comments: 1')
-    expect(page).to have_content('Likes:5')
-    expect(page).to have_selector('.pagination', count: 1)
+    expect(page).to have_content('comments: 1')
+    expect(page).to have_content('Likes: 5')
   end
 
   it "it redirects to that post's show page" do
