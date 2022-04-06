@@ -22,7 +22,7 @@ RSpec.describe 'users/index', type: :system, js: true do
       expect(page).to have_selector('img', count: 2)
       expect(page).to have_content('Number of posts:')
       click_on 'Omar'
-      expect(page).to have_current_path user_path(user_2)
+      expect(page).to have_current_path user_path(@user)
     end
 
    
