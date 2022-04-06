@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'devise/sessions/new', type: :system, js: true do
   describe 'login page' do
     before :each do
-      @user = User.new(name: 'Santiago', photo: 'http://photo.com', bio: 'This is me', posts_counter: 2, email: 'santiagovelosa@gmail.com', password: '123456')
+      @user = User.new(name: 'Santiago', photo: 'http://photo.com', bio: 'This is me', posts_counter: 2,
+                       email: 'santiagovelosa@gmail.com', password: '123456')
       @user.skip_confirmation!
       @user.save!
       visit user_session_path
@@ -29,7 +30,7 @@ RSpec.describe 'devise/sessions/new', type: :system, js: true do
       expect(page).to have_content('Log in')
     end
 
-    it "redirects to home page if user info is valid" do
+    it 'redirects to home page if user info is valid' do
       fill_in 'Email', with: 'santiagovelosa@gmail.com'
       fill_in 'Password', with: '123456'
       click_button 'Log in'

@@ -32,9 +32,8 @@ begin
   Capybara.register_driver :selenium_chrome do |app|
     Capybara::Selenium::Driver.new(app, browser: :chrome)
   end
-  
+
   Capybara.javascript_driver = :selenium_chrome
-  
 rescue ActiveRecord::PendingMigrationError => e
   puts e.to_s.strip
   exit 1
