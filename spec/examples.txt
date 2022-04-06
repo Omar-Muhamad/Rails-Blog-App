@@ -1,11 +1,12 @@
 example_id                                               | status | run_time        |
 -------------------------------------------------------- | ------ | --------------- |
-./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:1] | passed | 0.46413 seconds |
-./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:2] | passed | 0.6123 seconds  |
-./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:3] | passed | 0.63331 seconds |
-./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:4] | passed | 5 seconds       |
-./spec/views/posts/index.html.erb_spec.rb[1:1]           | passed | 0.43845 seconds |
-./spec/views/posts/index.html.erb_spec.rb[1:2]           | passed | 0.0734 seconds  |
-./spec/views/users/index.html.erb_spec.rb[1:1:1]         | passed | 1.82 seconds    |
-./spec/views/users/show.html.erb_spec.rb[1:1]            | passed | 0.1048 seconds  |
-./spec/views/users/show.html.erb_spec.rb[1:2]            | passed | 0.09528 seconds |
+./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:1] | passed | 0.36645 seconds |
+./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:2] | passed | 0.59985 seconds |
+./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:3] | passed | 0.69876 seconds |
+./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:4] | passed | 0.98546 seconds |
+./spec/views/posts/index.html.erb_spec.rb[1:1]           | passed | 0.31729 seconds |
+./spec/views/posts/index.html.erb_spec.rb[1:2]           | passed | 0.08012 seconds |
+./spec/views/posts/show.html.erb_spec.rb[1:1]            | passed | 0.0756 seconds  |
+./spec/views/users/index.html.erb_spec.rb[1:1:1]         | passed | 5.31 seconds    |
+./spec/views/users/show.html.erb_spec.rb[1:1]            | passed | 0.08596 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:2]            | passed | 0.0762 seconds  |

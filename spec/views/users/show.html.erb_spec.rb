@@ -27,7 +27,7 @@ RSpec.describe 'User Show', type: :feature do
   end
 
   it "it redirects me to the user's post's index page" do
-    click_on(class: 'posts_link_2')
+    click_on('New Post 2')
     expect(page).to have_current_path user_posts_path(@user)
   end
 end
