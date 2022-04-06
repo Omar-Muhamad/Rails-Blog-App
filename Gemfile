@@ -82,3 +82,5 @@ gem 'rails-controller-testing'
 gem 'ffi'
 
 gem 'devise'
+
+gem 'cancancan'
