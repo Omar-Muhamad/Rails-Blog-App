@@ -28,6 +28,13 @@ require 'capybara/rspec'
 # If you are not using ActiveRecord, you can remove these lines.
 begin
   ActiveRecord::Migration.maintain_test_schema!
+
+  Capybara.register_driver :selenium_chrome do |app|
+    Capybara::Selenium::Driver.new(app, browser: :chrome)
+  end
+  
+  Capybara.javascript_driver = :selenium_chrome
+  
 rescue ActiveRecord::PendingMigrationError => e
   puts e.to_s.strip
   exit 1
