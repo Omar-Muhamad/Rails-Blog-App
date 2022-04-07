@@ -10,7 +10,16 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :posts_counter, comparison: { greater_than_or_equal_to: 0 }, allow_blank: true
 
+  after_create :generate_api_token
+
   def last_three_posts
     posts.last(3)
+  end
+
+  private
+
+  def generate_api_token
+    self.api_token = Devise.friendly_token
+    self.save
   end
 end
