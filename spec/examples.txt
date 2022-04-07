@@ -1,12 +1,14 @@
 example_id                                               | status | run_time        |
 -------------------------------------------------------- | ------ | --------------- |
-./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:1] | passed | 0.36645 seconds |
-./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:2] | passed | 0.59985 seconds |
-./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:3] | passed | 0.69876 seconds |
-./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:4] | passed | 0.98546 seconds |
-./spec/views/posts/index.html.erb_spec.rb[1:1]           | passed | 0.31729 seconds |
-./spec/views/posts/index.html.erb_spec.rb[1:2]           | passed | 0.08012 seconds |
-./spec/views/posts/show.html.erb_spec.rb[1:1]            | passed | 0.0756 seconds  |
-./spec/views/users/index.html.erb_spec.rb[1:1:1]         | passed | 5.31 seconds    |
-./spec/views/users/show.html.erb_spec.rb[1:1]            | passed | 0.08596 seconds |
-./spec/views/users/show.html.erb_spec.rb[1:2]            | passed | 0.0762 seconds  |
+./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:1] | passed | 0.42815 seconds |
+./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:2] | passed | 0.7482 seconds  |
+./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:3] | passed | 0.66356 seconds |
+./spec/views/devise/sessions/new.html.erb_spec.rb[1:1:4] | passed | 1.11 seconds    |
+./spec/views/posts/index.html.erb_spec.rb[1:1]           | passed | 0.06252 seconds |
+./spec/views/posts/index.html.erb_spec.rb[1:2]           | passed | 0.0693 seconds  |
+./spec/views/posts/index.html.erb_spec.rb[1:3]           | passed | 0.06598 seconds |
+./spec/views/posts/show.html.erb_spec.rb[1:1]            | passed | 0.39252 seconds |
+./spec/views/users/index.html.erb_spec.rb[1:1:1]         | passed | 8.04 seconds    |
+./spec/views/users/show.html.erb_spec.rb[1:1]            | passed | 0.06646 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:2]            | passed | 0.07833 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:3]            | passed | 0.07522 seconds |

@@ -17,6 +17,7 @@ RSpec.describe 'Post index', type: :feature do
 
   it 'show post information' do
     expect(page).to have_selector('img', count: 1)
+    expect(page).to have_selector('.user-comment', count: 1)
     expect(page).to have_content('Omar')
     expect(page).to have_content('Number of posts: 1')
     expect(page).to have_content('My new post')
@@ -26,8 +27,13 @@ RSpec.describe 'Post index', type: :feature do
     expect(page).to have_content('Likes: 5')
   end
 
-  it "it redirects to that post's show page" do
+  it "redirects to that post's show page" do
     click_on 'My new post'
     expect(page).to have_current_path user_post_path(@user, @post)
+  end
+
+  it "redirects to user posts page" do
+    click_on 'Pagination'
+    expect(page).to have_current_path user_posts_path(@user)
   end
 end
