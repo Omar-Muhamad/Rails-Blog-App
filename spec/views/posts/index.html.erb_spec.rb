@@ -32,7 +32,7 @@ RSpec.describe 'Post index', type: :feature do
     expect(page).to have_current_path user_post_path(@user, @post)
   end
 
-  it "redirects to user posts page" do
+  it 'redirects to user posts page' do
     click_on 'Pagination'
     expect(page).to have_current_path user_posts_path(@user)
   end

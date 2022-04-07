@@ -17,6 +17,7 @@ RSpec.describe 'Post show', type: :feature do
 
   it 'show post information' do
     expect(page).to have_content('Post #3')
+    expect(page).to have_selector('.post-user-name', count: 1)
     expect(page).to have_content('Santiago')
     expect(page).to have_content('comments: 1')
     expect(page).to have_content('Likes: 5')

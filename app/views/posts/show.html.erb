@@ -2,6 +2,7 @@
   <div class="postDetails bg-[#11537d] rounded-[30px] flex-grow text-white flex flex-col p-[30px]">
     <div>  
       <h2 class="text-3xl font-semibold"><%= @post.title %></h2>
+      <p class="post-user-name"><%= @user.name %></p>
       <p class="text-md text-center font-medium"><%= @post.text %></p>
     </div> 
     <%= form_with model: [@post, @like], url: create_post_like_path  do |form| %>
