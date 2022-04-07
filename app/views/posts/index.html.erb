@@ -13,7 +13,7 @@
   <ul class="userCards flex flex-col gap-8">
     <% @posts.each do |post| %>
       <li class="postCard">
-        <a href="<%= user_post_path(@user, post) %>" class="flex flex-col gap-8">
+        <a href="<%= user_post_path(@user, post) %>" class="flex flex-col gap-8 post_link">
           <div class="postDetails bg-[#11537d] rounded-[30px] flex-grow text-white flex flex-col p-[30px]">
             <div>  
               <h2 class="text-3xl font-semibold"><%= post.title %></h2>
@@ -23,7 +23,7 @@
           </div>
           <ul class="bg-sky-600 rounded-[30px] flex-grow text-white font-medium flex flex-col p-[30px]">
             <%post.last_five_comments.each do |comment| %>
-              <li>
+              <li class="user-comment">
                 <h3><%= @user.name %>: <%= comment.text %></h3>
               </li>
             <% end %>
@@ -32,5 +32,6 @@
       </li>
     <% end %>
   </ul>
+  <%= link_to 'Pagination', user_posts_path(@user), class: 'pagination-button' %>
   <a href="<%= new_user_post_path(@user) %>" class="self-center text-white text-xl font-medium bg-[#11537d] p-[20px] rounded-[15px] w-fit">Add new post</a>
 </div
