@@ -28,6 +28,7 @@
       </li>
     <% end %>
   </ul>
+  <%= link_to "See all posts", user_posts_path(@user), class: 'SeeAllBtn' %>
   <% if @user.id == current_user.id %>
     <a href="<%= new_user_post_path(@user) %>" class="self-center text-white text-xl font-medium bg-[#11537d] p-[20px] rounded-[15px] w-fit">Add new post</a>
   <% end %>
