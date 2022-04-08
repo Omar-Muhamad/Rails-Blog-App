@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # delete '/users/:user_id/posts', to: 'posts#delete', as: 'delete_user_post'
   get 'api/v1/users/:user_id/posts', to: 'api/v1/posts#index', as: 'api_user_posts'
   get 'api/v1/users/:user_id/posts/:post_id/comments', to: 'api/v1/comments#index', as: 'api_posts_comments'
+  post 'api/v1/users/:user_id/posts/:post_id/comments', to: 'api/v1/comments#create', as: 'api_create_posts_comments'
   # Defines the root path route ("/")
   root "users#index"
 end

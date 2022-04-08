@@ -7,4 +7,19 @@ class Api::V1::CommentsController < ApiController
       format.json { render :json => @comments.to_json, :status => :ok }
     end
   end
+
+  def create
+    comment = Comment.new(comments_params)
+    if comment.save
+      render json: comment, status: :created
+    else
+      render json: comment.errors, status: :unprocessable_entity 
+    end
+  end
+
+  private
+
+  def comments_params
+    params.require(:comment).permit(:text)
+  end
 end
