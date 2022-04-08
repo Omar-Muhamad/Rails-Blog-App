@@ -20,7 +20,7 @@
       </div>
       <%= button_to "Delete Comment", user_post_comment_path(@user, @post, comment), method: :delete %>
     <% end %>
-    <%= link_to "add comment", new_post_comment_path(@post)%>
+    <%= link_to "add comment", new_post_comment_path(@user, @post)%>
   </div>
   
 </div>
