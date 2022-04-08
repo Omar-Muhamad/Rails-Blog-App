@@ -13,7 +13,6 @@ Rails.application.routes.draw do
 
   # delete '/users/:user_id/posts', to: 'posts#delete', as: 'delete_user_post'
   get 'api/v1/users/:user_id/posts', to: 'api/v1/posts#index', as: 'api_user_posts'
-  get 'users/:user_id/api_token', to: 'users#api_token', as: 'api_token_user'
   # Defines the root path route ("/")
   root "users#index"
 end
