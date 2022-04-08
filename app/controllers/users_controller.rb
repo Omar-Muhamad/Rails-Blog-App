@@ -10,9 +10,8 @@ class UsersController < ApplicationController
   #   @posts = @user.last_three_posts
   # end
 
-  def show
-  end
- 
+  def show; end
+
   def update
     if current_user.update_attributes(user_params)
       render :show

@@ -4,7 +4,7 @@ class Api::V1::CommentsController < ApiController
     @posts = @user.posts
     @comments = @user.comments
     respond_to do |format|
-      format.json { render :json => @comments.to_json, :status => :ok }
+      format.json { render json: @comments.to_json, status: :ok }
     end
   end
 
@@ -13,7 +13,7 @@ class Api::V1::CommentsController < ApiController
     if comment.save
       render json: comment, status: :created
     else
-      render json: comment.errors, status: :unprocessable_entity 
+      render json: comment.errors, status: :unprocessable_entity
     end
   end
 
