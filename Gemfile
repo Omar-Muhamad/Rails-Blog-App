@@ -85,3 +85,5 @@ gem 'ffi'
 gem 'devise'
 
 gem 'cancancan'
+
+gem 'jwt'
